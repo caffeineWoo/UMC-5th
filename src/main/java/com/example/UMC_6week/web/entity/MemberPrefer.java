@@ -1,8 +1,5 @@
-package com.example.UMC_6week.domain.mapping;
+package com.example.UMC_6week.web.entity;
 
-import com.example.UMC_6week.domain.FoodCategory;
-import com.example.UMC_6week.domain.Member;
-import com.example.UMC_6week.domain.common.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,7 +15,6 @@ public class MemberPrefer extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //연관관계 맵핑
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
@@ -27,4 +23,14 @@ public class MemberPrefer extends BaseEntity {
     @JoinColumn(name = "category_id")
     private FoodCategory foodCategory;
 
+    public void setMember(Member member){
+        if(this.member != null)
+            member.getMemberPreferList().remove(this);
+        this.member = member;
+        member.getMemberPreferList().add(this);
+    }
+
+    public void setFoodCategory(FoodCategory foodCategory){
+        this.foodCategory = foodCategory;
+    }
 }

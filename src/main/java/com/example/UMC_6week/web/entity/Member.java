@@ -1,4 +1,4 @@
-package com.example.UMC_6week.domain;
+package com.example.UMC_6week.web.entity;
 
 import com.example.UMC_6week.domain.common.BaseEntity;
 import com.example.UMC_6week.domain.enums.Gender;
@@ -7,7 +7,6 @@ import com.example.UMC_6week.domain.enums.SocialType;
 import com.example.UMC_6week.domain.mapping.MemberAgree;
 
 import com.example.UMC_6week.domain.mapping.MemberMission;
-import com.example.UMC_6week.domain.mapping.MemberPrefer;
 import lombok.*;
 
 import javax.persistence.*;
@@ -48,7 +47,7 @@ public class Member extends BaseEntity {
 
     private LocalDate inactiveDate;
 
-    @Column(nullable = false, length = 50)
+//    @Column(nullable = false, length = 50)
     private String email;
 
     private Integer point;

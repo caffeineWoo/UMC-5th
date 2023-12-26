@@ -1,4 +1,4 @@
-package com.example.UMC_6week.converter;
+package com.example.UMC_6week.Convertor;
 
 import com.example.UMC_6week.web.dto.TempResponse;
 

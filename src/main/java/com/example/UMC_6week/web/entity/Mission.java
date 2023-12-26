@@ -1,4 +1,4 @@
-package com.example.UMC_6week.domain;
+package com.example.UMC_6week.web.entity;
 
 import com.example.UMC_6week.domain.common.BaseEntity;
 import com.example.UMC_6week.domain.mapping.MemberMission;

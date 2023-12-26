@@ -1,7 +1,7 @@
 package com.example.UMC_6week.domain.mapping;
 
-import com.example.UMC_6week.domain.Member;
-import com.example.UMC_6week.domain.Terms;
+import com.example.UMC_6week.web.entity.Member;
+import com.example.UMC_6week.web.entity.Terms;
 import com.example.UMC_6week.domain.common.BaseEntity;
 import lombok.*;
 

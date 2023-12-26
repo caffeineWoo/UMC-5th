@@ -1,7 +1,7 @@
 package com.example.UMC_6week.web.controller;
 
 import com.example.UMC_6week.apiPayload.ApiResponse;
-import com.example.UMC_6week.converter.TempConverter;
+import com.example.UMC_6week.Convertor.TempConverter;
 import com.example.UMC_6week.service.TempService.TempQueryService;
 import com.example.UMC_6week.web.dto.TempResponse;
 import lombok.RequiredArgsConstructor;
