@@ -6,7 +6,6 @@ import com.example.UMC_6week.domain.enums.MemberStatus;
 import com.example.UMC_6week.domain.enums.SocialType;
 import com.example.UMC_6week.domain.mapping.MemberAgree;
 
-import com.example.UMC_6week.domain.mapping.MemberMission;
 import lombok.*;
 
 import javax.persistence.*;
