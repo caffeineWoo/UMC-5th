@@ -11,11 +11,9 @@ import com.example.UMC_6week.repository.RegionRepository;
 import com.example.UMC_6week.repository.StoreRepository;
 import com.example.UMC_6week.web.dto.MemberRequestDTO;
 import com.example.UMC_6week.web.dto.StoreRequestDTO;
-import com.example.UMC_6week.web.entity.FoodCategory;
-import com.example.UMC_6week.web.entity.Member;
-import com.example.UMC_6week.web.entity.MemberPrefer;
-import com.example.UMC_6week.web.entity.Store;
+import com.example.UMC_6week.web.entity.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,5 +36,11 @@ public class StoreCommandServiceImpl implements StoreCommandService{
 
         return storeRepository.save(store);
     }
+    public boolean existById(List<Long> values) {
+        boolean isValid = values.stream()
+                .allMatch(value -> storeRepository.existsById(value));
+        return isValid;
+    }
+
 
 }

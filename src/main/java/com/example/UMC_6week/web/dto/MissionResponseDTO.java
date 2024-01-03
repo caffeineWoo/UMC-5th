@@ -1,5 +1,6 @@
 package com.example.UMC_6week.web.dto;
 
+import com.example.UMC_6week.web.entity.Store;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -9,7 +10,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class StoreResponseDTO {
+public class MissionResponseDTO {
 
     @Builder
     @Getter
@@ -25,8 +26,8 @@ public class StoreResponseDTO {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ReviewPreViewListDTO{
-        List<ReviewPreViewDTO> reviewList;
+    public static class MissionPreViewListDTO{
+        List<MissionPreViewDTO> missionList;
         Integer listSize;
         Integer totalPage;
         Long totalElements;
@@ -38,10 +39,11 @@ public class StoreResponseDTO {
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ReviewPreViewDTO{
-        String ownerNickname;
-        Float score;
-        String body;
-        LocalDate createdAt;
+    public static class MissionPreViewDTO{
+        Integer reward;
+        LocalDate deadline;
+        String missionSpec;
+        Store store;
+
     }
 }

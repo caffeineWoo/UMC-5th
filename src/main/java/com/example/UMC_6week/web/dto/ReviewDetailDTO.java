@@ -6,21 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
-public class StoreResponseDTO {
-
-    @Builder
-    @Getter
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public static class JoinResultDTO{
-        Long Id;
-        LocalDateTime createdAt;
-    }
-
-//    CreateReviewResultDTO
+public class ReviewDetailDTO {
     @Builder
     @Getter
     @NoArgsConstructor

@@ -13,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -37,5 +39,10 @@ public class ReviewCommandServiceImpl implements ReviewCommandService{
 
 
     };
+    public boolean existById(List<Long> values) {
+        boolean isValid = values.stream()
+                .allMatch(value -> reviewRepository.existsById(value));
+        return isValid;
+    }
 
 }

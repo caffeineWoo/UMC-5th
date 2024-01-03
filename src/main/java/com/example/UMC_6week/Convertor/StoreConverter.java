@@ -6,10 +6,12 @@ import com.example.UMC_6week.web.dto.MemberResponseDTO;
 import com.example.UMC_6week.web.dto.StoreRequestDTO;
 import com.example.UMC_6week.web.dto.StoreResponseDTO;
 import com.example.UMC_6week.web.entity.Member;
+import com.example.UMC_6week.web.entity.Review;
 import com.example.UMC_6week.web.entity.Store;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 
 public class StoreConverter {
 
@@ -28,5 +30,26 @@ public class StoreConverter {
                 .score(request.getScore())
                 .region(request.getRegion())
                 .build();
+    }
+    public static Review toReview(StoreRequestDTO.ReviewDTO request){
+        return Review.builder()
+                .title(request.getTitle())
+                .score(request.getScore())
+                .body(request.getBody())
+                .build();
+    }
+
+    public static StoreResponseDTO.JoinResultDTO toCreateReviewResultDTO(Review review){
+        return StoreResponseDTO.JoinResultDTO.builder()
+                .Id(review.getId())
+                .createdAt(LocalDateTime.now())
+                .build();
+    }
+
+    public static StoreResponseDTO.ReviewPreViewDTO reviewPreViewDTO(Review review){
+        return null;
+    }
+    public static StoreResponseDTO.ReviewPreViewListDTO reviewPreViewListDTO( List<Review> reviewList){
+        return null;
     }
 }
